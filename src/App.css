@@ -1,0 +1,229 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Navbar  */
+.dFlex, .price_section, .sizes, .price, .cta_group{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn_add{
+  background-color: #ff7c00;
+  margin-right: 10px;
+  color: #fff !important;
+  font-weight:500;
+  border-radius: 5px;
+}
+.btn_add:hover{
+  background-color:rgb(3, 54, 54);
+  margin-right: 10px;
+  color: #fff !important;
+  font-weight:500;
+}
+.navbar-brand{
+  font-family: 'Racing Sans One';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+}
+.mb_80{
+  margin-bottom: 80px;
+}
+.product_list_container{
+  display: block;
+  max-width: 1140px;
+  padding: 50px 100px 0 100px;
+  width:100%;
+  margin:50px auto;
+  @media(max-width:1024px){
+    padding:50px 0 0 0;
+  }
+  @media(max-width:768px){
+    padding:50px 20 0 20;
+  }
+}
+.card{
+  width:100%;
+  position: relative;
+  border-radius: 15px;
+  transition: all .3s ease-in-out;
+}
+
+
+.card_img{
+  position: relative;
+  width:100%;
+  top:-20px;
+  transition:all 3s ease-in-out;
+}
+.card_body{
+  padding: 0 25px;
+}
+.card_body h2{
+  text-align: center;
+  font-weight: normal;
+  text-transform: uppercase;
+  margin:10px 0;
+  letter-spacing: 2px;
+  font-size:20px;
+
+}
+.card_body p{
+  text-align: center;
+  font-size: 13px;
+  line-height:1.5;
+  margin-bottom: 15px;
+
+}
+
+.price_section
+{
+justify-content: center;
+
+}
+.price_section .sizes{
+  width: 50%;
+justify-content: flex-start;
+font-size: 12px;
+}
+.sizes span{
+  margin-left:10px;
+}
+.price{
+  justify-content: flex-end;
+  font-size: 20px;
+
+}
+.price span{
+  margin-right: 5px;
+  display: inline-block;
+  
+}
+.cta_group .button_act{
+  width: 150px;
+  height: 40px;
+  border:2px solid rgb(182, 164, 5);
+  color:  rgb(219, 219, 10);
+  margin: 20px 2px;
+  text-align: center;
+  border-radius: 20px;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+  transition: all 0.5s ease-in-out;
+
+}
+.card:hover{
+  background-color: #e97508;
+  cursor: pointer;
+  box-shadow: 13px 18px 42px -20px rgba(#0c0c0c, .85);
+  color:#fff;
+}
+.card_img:hover{
+  top:-40px;
+
+}
+.card_img img:hover{
+  /* transform: translate(1); */
+  transform: scale(1.1);
+}
+.card_img img::after{
+  bottom:-20px;
+}
+  .cta_group .button_act:hover{
+  color: #fff;
+  background-color: rgb(71, 38, 6);
+  box-shadow: 11px 10px 12px -5px rgb(#282c34, .52);
+}
+.loader{
+  height: 20px;
+  width: 250px;
+  margin: auto;
+  position: relative;
+}
+.loader--dot{
+  animation-name:loader;
+  animation-timing-function: ease-in-out;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  height: 20px;
+  width: 20px;
+  border-radius: 100%;
+  background-color: #0c0c0c;
+  position:absolute;
+  border: 2px solid white ;
+}
+.loader--dot:nth-child(1){
+  background-color: #73eb0a;
+  animation-delay: 0.3s;
+}
+.loader--dot:nth-child(2){
+  background-color: #5aa01c;
+  animation-delay: 0.4s;
+}
+.loader--dot:nth-child(3){
+  background-color: #86daaf;
+  animation-delay: 0.2s;
+}
+.loader--dot:nth-child(4){
+  background-color: #ef5d74;
+  animation-delay: 0.3s;
+}
+.loader--dot:nth-child(5){
+  background-color: #f9a74b;
+  animation-delay: 0.4s;
+}
+.loader--dot :nth-child(6){
+  background-color: #60beeb;
+  animation-delay: 0.5s;
+}
+@keyframes loader{
+  15%{
+    transform: translate(0);
+  }
+  45%{
+    transform: translate(230px);
+  }
+  65%{
+    transform: translate(230px);
+  }
+  95%{
+    transform: translate(0);
+  }
+}
+.loader .loader--text{
+  position: absolute;
+  top:30px;
+  left:0;
+  right: 0;
+  width: 2vw;
+  margin: auto;
+
+}
+.loader .loader--text::after{
+  content: "Loading";
+  font-weight: bold;
+  animation-name:loading-text;
+  animation-duration:3s;
+  animation-iteration-count: infinite;
+
+}
+@keyframes loading-text{
+  0%{
+    content: "Loading.";
+  }
+  25%{
+    content: "Loading..";
+  }
+  50%{
+    content: "Loading...";
+  }
+  75%{
+    content: "Loading....";
+  }
+}
+
+  
